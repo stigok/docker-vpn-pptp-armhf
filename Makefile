@@ -22,6 +22,7 @@ testrun:
 		-v $(PWD)/etc/ppp/pptpd-options:/etc/ppp/pptpd-options \
 		-v $(PWD)/chap-secrets:/etc/ppp/chap-secrets \
 		--tmpfs /var/log:rw,noexec,nosuid \
+		-v $(PWD)/wtmp.log:/var/log/wtmp \
 		--restart=unless-stopped \
 		--env TZ=Europe/Oslo \
 		$(IMAGE):$(VERSION)
