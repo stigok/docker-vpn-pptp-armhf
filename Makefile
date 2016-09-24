@@ -23,5 +23,6 @@ testrun:
 		-v $(PWD)/chap-secrets:/etc/ppp/chap-secrets \
 		--tmpfs /var/log:rw,noexec,nosuid \
 		--restart=unless-stopped \
+		--env TZ=Europe/Oslo \
 		$(IMAGE):$(VERSION)
 
